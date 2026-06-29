@@ -56,15 +56,15 @@ const experience = [
   {
     icon: Brain,
     title: "AI Trainee, AC Labs (Access)",
-    period: "05/2026 – prezent",
-    location: "Timișoara, România",
-    desc: "Program „Powered by AI, Driven by You\". Contribui la construcția platformei QuizMaster, o aplicație end-to-end pentru managementul automat de conținut.",
+    period: "05/2026 to present",
+    location: "Timișoara, Romania",
+    desc: "Powered by AI, Driven by You. I contribute to building the QuizMaster platform, an end-to-end solution for automated content management.",
     includes: [
-      "Dezvoltare cu React și .NET 10 Web API",
-      "Implementare LLM-uri (Azure OpenAI) pentru generare automată de conținut",
-      "Vectorizare de date și integrare Vector Databases pentru căutare semantică",
-      "Principii SOLID, Clean Architecture și Design Patterns",
-      "Productivitate crescută folosind Claude Code și GitHub Copilot",
+      "React and .NET 10 Web API development",
+      "LLM implementation (Azure OpenAI) for automatic content generation",
+      "Data vectorization and Vector Database integration for semantic search",
+      "SOLID principles, Clean Architecture, and design patterns",
+      "Increased productivity using Claude Code and GitHub Copilot",
     ],
     accent: "from-violet-100 to-purple-50",
     iconColor: "text-violet-600",
@@ -76,13 +76,13 @@ const experience = [
   {
     icon: Wrench,
     title: "IT Intern, Mind Automobile Parts Romania",
-    period: "04/2026 – prezent",
-    location: "Timișoara, România",
-    desc: "Configurare și mentenanță a infrastructurii IT a companiei, cu suport tehnic rapid și automatizare de procese interne.",
+    period: "04/2026 to present",
+    location: "Timișoara, Romania",
+    desc: "IT infrastructure setup and maintenance for the company, with fast technical support and internal process automation.",
     includes: [
-      "Configurare și troubleshooting hardware & infrastructură IT",
-      "Mentenanță proactivă și administrare de sisteme interne",
-      "Automatizarea fluxurilor manuale, în colaborare cu diverse departamente",
+      "Hardware and IT infrastructure setup and troubleshooting",
+      "Proactive maintenance and internal systems administration",
+      "Automation of manual workflows in collaboration with cross-functional teams",
     ],
     accent: "from-cyan-100 to-sky-50",
     iconColor: "text-cyan-600",
@@ -93,10 +93,10 @@ const experience = [
 ];
 
 const benefits = [
-  { icon: Brain,       title: "Machine Learning & Computer Vision", desc: "Modele LSTM, MediaPipe, OpenCV, de la colectarea datelor la modele care funcționează în timp real." },
-  { icon: Server,      title: "Full-Stack Development",             desc: "Next.js, React, .NET, Supabase/PostgreSQL, aplicații complete, de la bază de date la UI." },
-  { icon: Code2,       title: "Agile & Versionare",                 desc: "Git, GitHub, Jira, Scrum, flux de lucru organizat, code review și colaborare în echipă." },
-  { icon: Smartphone,  title: "Bilingv RO/EN, fluent RU",            desc: "Comunic eficient în echipe internaționale, scris și verbal." },
+  { icon: Brain,       title: "Machine Learning and Computer Vision", desc: "LSTM models, MediaPipe, OpenCV, from data collection to real time production ready systems." },
+  { icon: Server,      title: "Full stack Development",             desc: "Next.js, React, .NET, Supabase/PostgreSQL, end to end apps from database to UI." },
+  { icon: Code2,       title: "Agile & Versioning",                 desc: "Git, GitHub, Jira, Scrum with organized workflows, code reviews, and team collaboration." },
+  { icon: Smartphone,  title: "Bilingual RO/EN, fluent RU",          desc: "Effective communication in international teams, written and verbal." },
 ];
 
 const skills = [
@@ -154,10 +154,10 @@ export default function PortfolioPage() {
             <span className="text-[10px] text-stone-400 font-medium tracking-tight leading-none mt-0.5">Computer Science & IT Student</span>
           </a>
           <div className="hidden md:flex items-center gap-8 text-sm text-stone-500">
-            <a href="#experienta" className="hover:text-stone-900 transition-colors">Experiență</a>
-            <a href="#proiecte" className="hover:text-stone-900 transition-colors">Proiecte</a>
-            <a href="#despre"   className="hover:text-stone-900 transition-colors">Despre mine</a>
-            <a href="#educatie" className="hover:text-stone-900 transition-colors">Educație</a>
+            <a href="#experience" className="hover:text-stone-900 transition-colors">Experience</a>
+            <a href="#projects" className="hover:text-stone-900 transition-colors">Projects</a>
+            <a href="#about"    className="hover:text-stone-900 transition-colors">About</a>
+            <a href="#education" className="hover:text-stone-900 transition-colors">Education</a>
             <a href="#contact"  className="hover:text-stone-900 transition-colors">Contact</a>
           </div>
           <a
@@ -166,7 +166,7 @@ export default function PortfolioPage() {
             className="inline-flex items-center gap-2 text-sm px-4 py-2 rounded-full bg-stone-900 text-white font-medium hover:bg-stone-700 transition-colors"
           >
             <Download className="w-3.5 h-3.5" />
-            Descarcă CV
+            Download CV
           </a>
         </div>
       </nav>
@@ -175,15 +175,15 @@ export default function PortfolioPage() {
       <HeroAnimated />
 
       {/* ── Experience ───────────────────────────────────────────────────── */}
-      <section id="experienta" className="max-w-6xl mx-auto px-6 py-28">
+      <section id="experience" className="max-w-6xl mx-auto px-6 py-28">
         <Reveal>
           <div className="mb-16 max-w-2xl">
-            <Label>Experiență</Label>
+            <Label>Experience</Label>
             <h2 className="text-4xl md:text-5xl font-bold tracking-tight text-stone-900 leading-tight">
-              Ce am construit<br />până acum
+              What I have built<br />so far
             </h2>
             <p className="mt-5 text-stone-500 leading-relaxed">
-              Experiență practică în AI/ML și infrastructură IT, alături de proiecte personale și freelance full-stack.
+              Hands on experience in AI/ML and IT infrastructure, alongside personal and full stack freelance projects.
             </p>
           </div>
         </Reveal>
@@ -205,7 +205,7 @@ export default function PortfolioPage() {
                       <h3 className="text-xl font-bold text-stone-900 tracking-tight">{s.title}</h3>
                       {s.featured && (
                         <span className="inline-flex items-center gap-1 text-[10px] font-semibold uppercase tracking-wider px-2 py-0.5 rounded-full bg-violet-50 border border-violet-200 text-violet-600">
-                          Actual
+                          Active
                         </span>
                       )}
                     </div>
@@ -222,7 +222,7 @@ export default function PortfolioPage() {
                   </div>
 
                   <div className="md:pt-1 md:text-right md:min-w-[10rem]">
-                    <p className="text-xs text-stone-400 uppercase tracking-wider mb-0.5">Perioadă</p>
+                    <p className="text-xs text-stone-400 uppercase tracking-wider mb-0.5">Period</p>
                     <p className="text-sm font-bold text-stone-900">{s.period}</p>
                     <p className="mt-3 text-xs text-stone-400">{s.location}</p>
                   </div>
@@ -239,15 +239,15 @@ export default function PortfolioPage() {
       </div>
 
       {/* ── Projects ─────────────────────────────────────────────────────── */}
-      <section id="proiecte" className="max-w-6xl mx-auto px-6 py-28">
+      <section id="projects" className="max-w-6xl mx-auto px-6 py-28">
         <Reveal>
           <div className="mb-16 max-w-2xl">
-            <Label>Proiecte</Label>
+            <Label>Projects</Label>
             <h2 className="text-4xl md:text-5xl font-bold tracking-tight text-stone-900 leading-tight">
-              Proiecte tehnice<br />și freelance
+              Technical projects<br />and freelance work
             </h2>
             <p className="mt-5 text-stone-500 leading-relaxed">
-              De la modele de machine learning antrenate de la zero, până la aplicații full-stack cu bază de date reală și site-uri de prezentare live, în producție.
+              From machine learning models trained from scratch to full stack apps with real databases and production ready websites.
             </p>
           </div>
         </Reveal>
@@ -278,7 +278,7 @@ export default function PortfolioPage() {
                 <div className="px-6 pt-4 pb-6">
                   <p className="text-sm text-stone-500 leading-relaxed">{p.shortDesc}</p>
                   <span className="inline-flex items-center gap-1 mt-3 text-xs font-medium text-stone-400 group-hover:text-cyan-600 transition-colors">
-                    Vezi proiectul <ArrowRight className="w-3 h-3 transition-transform group-hover:translate-x-0.5" />
+                    View project <ArrowRight className="w-3 h-3 transition-transform group-hover:translate-x-0.5" />
                   </span>
                 </div>
               </Link>
@@ -293,14 +293,14 @@ export default function PortfolioPage() {
       </div>
 
       {/* ── About ────────────────────────────────────────────────────────── */}
-      <section id="despre" className="max-w-6xl mx-auto px-6 py-28">
+      <section id="about" className="max-w-6xl mx-auto px-6 py-28">
         <div className="grid lg:grid-cols-2 gap-16 items-center">
           <Reveal>
             <div className="relative max-w-sm mx-auto lg:mx-0">
               <div className="absolute -inset-3 rounded-3xl border border-stone-200 bg-stone-100/50" />
               <div className="relative rounded-2xl overflow-hidden aspect-[3/4] shadow-card">
                 <img
-                  src="/me.jpg"
+                  src="/me.webp"
                   alt="Dogaru Cătălin"
                   className="w-full h-full object-cover object-top"
                 />
@@ -312,36 +312,34 @@ export default function PortfolioPage() {
               </div>
               <div className="absolute -top-3 -right-3 flex items-center gap-2 px-3 py-1.5 rounded-full bg-white border border-stone-200 shadow-card">
                 <span className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse" />
-                <span className="text-xs text-stone-600 font-medium">Disponibil</span>
+                <span className="text-xs text-stone-600 font-medium">Available</span>
               </div>
             </div>
           </Reveal>
 
           <Reveal delay={120}>
-            <Label>Despre mine</Label>
+            <Label>About</Label>
             <h2 className="text-4xl md:text-5xl font-bold tracking-tight text-stone-900 leading-tight mb-6">
-              Învăț rapid și construiesc{" "}
-              <span className="italic text-cyan-600">produse care funcționează</span>
+              I learn quickly and build
+              <span className="italic text-cyan-600"> products that work</span>
             </h2>
             <div className="space-y-4 text-stone-500 leading-relaxed">
               <p>
-                Sunt Cătălin, student în anul III la Computer Science și Information Technology,
-                Universitatea Politehnica Timișoara. Lucrez ca IT Intern la Mind Automobile Parts
-                Romania și sunt și AI Trainee la Access, unde contribui la o platformă de
-                automatizare bazată pe LLM-uri.
+                I'm Cătălin, a third-year Computer Science and Information Technology student at
+                Politehnica University of Timișoara. I work as an IT Intern at Mind Automobile Parts
+                Romania and as an AI Trainee at Access, contributing to an LLM-powered automation platform.
               </p>
               <p>
-                În timpul liber construiesc proiecte de machine learning și computer vision de la
-                zero, de la colectarea datelor până la modele care rulează în timp real, și
-                aplicații full-stack pentru clienți freelance, cu baze de date reale și utilizatori reali.
+                In my free time I build machine learning and computer vision projects from scratch, starting from
+                data collection and moving to real time models and full stack apps for freelance clients with real databases and users.
               </p>
             </div>
 
             <div className="mt-8 grid grid-cols-3 gap-3">
               {[
-                { val: "2",      label: "Experiențe profesionale" },
-                { val: "10+",    label: "Proiecte tehnice" },
-                { val: "RO/EN/RU", label: "Limbi vorbite" },
+                { val: "2",      label: "Professional experiences" },
+                { val: "10+",    label: "Technical projects" },
+                { val: "RO/EN/RU", label: "Languages" },
               ].map((s) => (
                 <div key={s.label} className="p-4 rounded-xl border border-stone-200 bg-white text-center shadow-card">
                   <p className="text-2xl font-bold text-stone-900">{s.val}</p>
@@ -366,7 +364,7 @@ export default function PortfolioPage() {
                 href="#contact"
                 className="group inline-flex items-center gap-2 text-sm font-semibold text-stone-900 hover:text-cyan-600 transition-colors"
               >
-                Hai să discutăm
+                Let's talk
                 <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />
               </a>
             </div>
@@ -380,12 +378,12 @@ export default function PortfolioPage() {
       </div>
 
       {/* ── Education & Skills ───────────────────────────────────────────── */}
-      <section id="educatie" className="max-w-6xl mx-auto px-6 py-28">
+      <section id="education" className="max-w-6xl mx-auto px-6 py-28">
         <Reveal>
           <div className="mb-16 max-w-2xl">
-            <Label>Educație & Skills</Label>
+            <Label>Education & Skills</Label>
             <h2 className="text-4xl md:text-5xl font-bold tracking-tight text-stone-900 leading-tight">
-              Ce am studiat și<br />ce stăpânesc
+              What I have studied<br />and what I master
             </h2>
           </div>
         </Reveal>
@@ -410,27 +408,27 @@ export default function PortfolioPage() {
               <div>
                 <div className="flex items-center gap-2 mb-5">
                   <GraduationCap className="w-4 h-4 text-cyan-600" />
-                  <h3 className="text-lg font-bold text-stone-900">Educație</h3>
+                  <h3 className="text-lg font-bold text-stone-900">Education</h3>
                 </div>
                 <div className="space-y-5">
                   <div>
-                    <p className="text-xs text-stone-400 uppercase tracking-wide mb-1">2023 – prezent</p>
+                    <p className="text-xs text-stone-400 uppercase tracking-wide mb-1">2023 to present</p>
                     <p className="font-semibold text-stone-900">Universitatea Politehnica Timișoara</p>
                     <p className="text-sm text-stone-500">Licență, Computer Science and Information Technology</p>
                   </div>
                   <div>
-                    <p className="text-xs text-stone-400 uppercase tracking-wide mb-1">2020 – 2023</p>
+                    <p className="text-xs text-stone-400 uppercase tracking-wide mb-1">2020 to 2023</p>
                     <p className="font-semibold text-stone-900">Liceul Teoretic „Ion Creangă", Chișinău</p>
-                    <p className="text-sm text-stone-500">Diplomă de Bacalaureat</p>
+                    <p className="text-sm text-stone-500">Baccalaureate Diploma</p>
                   </div>
                 </div>
                 <div className="mt-6 flex items-center gap-2">
                   <Languages className="w-4 h-4 text-cyan-600" />
-                  <p className="text-sm text-stone-600">Română (nativ) · Engleză (avansat) · Rusă (fluent)</p>
+                  <p className="text-sm text-stone-600">Romanian (native) · English (advanced) · Russian (fluent)</p>
                 </div>
               </div>
               <div>
-                <h3 className="text-lg font-bold text-stone-900 mb-5">Tehnologii & Tools</h3>
+                  <h3 className="text-lg font-bold text-stone-900 mb-5">Technologies & Tools</h3>
                 <div className="flex flex-wrap gap-2">
                   {skills.map((skill) => (
                     <span
@@ -456,11 +454,11 @@ export default function PortfolioPage() {
                 <span className="text-cyan-400">Contact</span>
               </Label>
               <h2 className="text-4xl md:text-5xl font-bold tracking-tight text-white leading-tight mt-1">
-                Sunt în căutarea unui rol în<br />
+                I'm looking for a role in<br />
                 <span className="italic text-stone-400">software development</span>
               </h2>
               <p className="mt-6 text-stone-400 leading-relaxed max-w-xl mx-auto">
-                Răspund de obicei în câteva ore. Hai să discutăm despre cum pot contribui în echipa ta.
+                I usually reply within a few hours. Let's discuss how I can contribute to your team.
               </p>
 
               <div className="mt-10 flex flex-col sm:flex-row gap-3 justify-center">
@@ -470,7 +468,7 @@ export default function PortfolioPage() {
                   className="inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-full bg-emerald-500 text-white font-semibold hover:bg-emerald-400 transition-colors"
                 >
                   <Download className="w-4 h-4" />
-                  Descarcă CV
+                  Download CV
                 </a>
                 <a
                   href="https://www.linkedin.com/in/catalin-dogaru/"
@@ -496,7 +494,7 @@ export default function PortfolioPage() {
                 <div className="flex items-start gap-3">
                   <Smartphone className="w-4 h-4 text-stone-500 mt-0.5 flex-shrink-0" />
                   <div>
-                    <p className="text-xs text-stone-500 uppercase tracking-wide mb-1">Telefon</p>
+                    <p className="text-xs text-stone-500 uppercase tracking-wide mb-1">Phone</p>
                     <a href="tel:+40733646257" className="text-sm text-stone-300 hover:text-white transition-colors">
                       +40 733 646 257
                     </a>
@@ -517,8 +515,8 @@ export default function PortfolioPage() {
                 <div className="flex items-start gap-3">
                   <Server className="w-4 h-4 text-stone-500 mt-0.5 flex-shrink-0" />
                   <div>
-                    <p className="text-xs text-stone-500 uppercase tracking-wide mb-1">Locație</p>
-                    <p className="text-sm text-stone-300">Timișoara, România</p>
+                    <p className="text-xs text-stone-500 uppercase tracking-wide mb-1">Location</p>
+                    <p className="text-sm text-stone-300">Timișoara, Romania</p>
                   </div>
                 </div>
               </div>
@@ -534,7 +532,7 @@ export default function PortfolioPage() {
             <Code2 className="w-4 h-4 text-stone-300" />
             <span>Dogaru Cătălin · Computer Science & IT Student</span>
           </div>
-          <p>© {new Date().getFullYear()} · Construit cu Next.js & Tailwind CSS.</p>
+          <p>© {new Date().getFullYear()} · Built with Next.js & Tailwind CSS.</p>
         </div>
       </footer>
 

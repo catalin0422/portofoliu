@@ -63,13 +63,13 @@ function MaisonLanding() {
           <span className="text-xs font-bold tracking-widest">MAISON BARBER</span>
         </div>
         <div className="hidden md:flex gap-5 text-[9px] text-zinc-400">
-          <span>Servicii</span>
-          <span>Echipa</span>
-          <span>Galerie</span>
+          <span>Services</span>
+          <span>Team</span>
+          <span>Gallery</span>
           <span>Contact</span>
         </div>
         <span className="text-[9px] px-2.5 py-1 rounded-full bg-amber-400 text-zinc-900 font-semibold">
-          Programează
+          Book now
         </span>
       </div>
       <div className="relative h-[calc(100%-2.6rem)]">
@@ -78,17 +78,17 @@ function MaisonLanding() {
         <div className="relative h-full flex flex-col justify-end p-6">
           <span className="text-[9px] uppercase tracking-widest text-amber-400 mb-2">Premium barbershop</span>
           <h1 className="text-2xl md:text-4xl font-bold leading-tight max-w-md">
-            Stilul tău începe<br />cu o programare.
+            Your style starts<br />with an appointment.
           </h1>
           <p className="text-[10px] text-zinc-300 mt-2 max-w-xs">
-            Echipă premiată, produse premium, atmosferă autentică.
+            Award winning team, premium products, authentic atmosphere.
           </p>
           <div className="flex gap-2 mt-4">
             <span className="text-[9px] px-3 py-1.5 rounded-full bg-white text-zinc-900 font-semibold">
-              Rezervă online
+              Book online
             </span>
             <span className="text-[9px] px-3 py-1.5 rounded-full border border-white/20">
-              Vezi galerie
+              View gallery
             </span>
           </div>
         </div>
@@ -98,19 +98,19 @@ function MaisonLanding() {
 }
 
 function MaisonBooking() {
-  const days = ["Lu", "Ma", "Mi", "Jo", "Vi", "Sâ", "Du"];
+  const days = ["Mo", "Tu", "We", "Th", "Fr", "Sa", "Su"];
   const dates = [4, 5, 6, 7, 8, 9, 10];
   const slots = ["09:00", "10:30", "11:00", "12:30", "14:00", "15:30", "16:00", "17:30"];
   return (
     <div className="bg-zinc-950 text-zinc-100 h-full p-5 overflow-hidden">
       <div className="flex items-center justify-between mb-4">
         <div>
-          <p className="text-[9px] text-zinc-500 uppercase tracking-wide">Pasul 2 din 3</p>
-          <h2 className="text-base font-bold">Alege data și ora</h2>
+          <p className="text-[9px] text-zinc-500 uppercase tracking-wide">Step 2 of 3</p>
+          <h2 className="text-base font-bold">Choose date and time</h2>
         </div>
         <div className="flex items-center gap-2 px-2 py-1 rounded-full bg-white/5 border border-white/10">
           <img src={photos.barber1} className="w-5 h-5 rounded-full object-cover" alt="" />
-          <span className="text-[9px]">Andrei · Tunsoare</span>
+          <span className="text-[9px]">Andrei · Haircut</span>
         </div>
       </div>
       <div className="grid grid-cols-7 gap-1.5 mb-4">
@@ -126,7 +126,7 @@ function MaisonBooking() {
           </div>
         ))}
       </div>
-      <p className="text-[9px] text-zinc-500 mb-2">Intervale disponibile · Miercuri 6 mai</p>
+      <p className="text-[9px] text-zinc-500 mb-2">Available slots · Wednesday, May 6</p>
       <div className="grid grid-cols-4 gap-1.5 mb-4">
         {slots.map((s, i) => (
           <div
@@ -145,11 +145,11 @@ function MaisonBooking() {
       </div>
       <div className="rounded-xl bg-white/5 border border-white/10 p-3 flex items-center justify-between">
         <div>
-          <p className="text-[9px] text-zinc-500">Total programare</p>
+          <p className="text-[9px] text-zinc-500">Appointment total</p>
           <p className="text-base font-bold">120 lei <span className="text-[9px] text-zinc-500 font-normal">· 45 min</span></p>
         </div>
         <span className="text-[10px] px-4 py-2 rounded-full bg-amber-400 text-zinc-900 font-semibold">
-          Confirmă
+          Confirm
         </span>
       </div>
     </div>
@@ -158,10 +158,10 @@ function MaisonBooking() {
 
 function MaisonDashboard() {
   const appts = [
-    { time: "10:00", name: "Andrei Popescu", svc: "Tunsoare + Barbă", price: 180 },
-    { time: "11:30", name: "Mihai Ionescu", svc: "Tunsoare", price: 120 },
-    { time: "13:00", name: "Radu Stan", svc: "Barbă", price: 80 },
-    { time: "14:30", name: "Vlad Marin", svc: "Tunsoare + Barbă", price: 180 },
+    { time: "10:00", name: "Andrei Popescu", svc: "Haircut + Beard", price: 180 },
+    { time: "11:30", name: "Mihai Ionescu", svc: "Haircut", price: 120 },
+    { time: "13:00", name: "Radu Stan", svc: "Beard", price: 80 },
+    { time: "14:30", name: "Vlad Marin", svc: "Haircut + Beard", price: 180 },
   ];
   return (
     <div className="bg-zinc-950 text-zinc-100 h-full overflow-hidden flex">
@@ -173,7 +173,7 @@ function MaisonDashboard() {
             <p className="text-[8px] text-zinc-500">Senior Barber</p>
           </div>
         </div>
-        {["Programări", "Calendar", "Clienți", "Statistici", "Setări"].map((it, i) => (
+        {["Appointments", "Calendar", "Clients", "Stats", "Settings"].map((it, i) => (
           <div
             key={it}
             className={`text-[9px] px-2 py-1.5 rounded ${i === 0 ? "bg-amber-400/10 text-amber-300" : "text-zinc-400"}`}
@@ -185,26 +185,26 @@ function MaisonDashboard() {
       <div className="flex-1 p-4 overflow-hidden">
         <div className="flex items-center justify-between mb-3">
           <div>
-            <h2 className="text-base font-bold">Bună, Andrei 👋</h2>
-            <p className="text-[9px] text-zinc-500">Ai 4 programări astăzi</p>
+            <h2 className="text-base font-bold">Hi, Andrei 👋</h2>
+            <p className="text-[9px] text-zinc-500">You have 4 bookings today</p>
           </div>
           <Bell className="w-4 h-4 text-zinc-400" />
         </div>
         <div className="grid grid-cols-3 gap-2 mb-3">
           <div className="rounded-lg bg-white/5 p-2.5 border border-white/5">
-            <p className="text-[8px] text-zinc-500 uppercase tracking-wide">Astăzi</p>
+            <p className="text-[8px] text-zinc-500 uppercase tracking-wide">Today</p>
             <p className="text-base font-bold">560 <span className="text-[9px] font-normal text-zinc-500">lei</span></p>
           </div>
           <div className="rounded-lg bg-white/5 p-2.5 border border-white/5">
-            <p className="text-[8px] text-zinc-500 uppercase tracking-wide">Săptămână</p>
+            <p className="text-[8px] text-zinc-500 uppercase tracking-wide">Week</p>
             <p className="text-base font-bold">3.240 <span className="text-[9px] font-normal text-zinc-500">lei</span></p>
           </div>
           <div className="rounded-lg bg-amber-400/10 p-2.5 border border-amber-400/20">
-            <p className="text-[8px] text-amber-300/80 uppercase tracking-wide">Lună</p>
+            <p className="text-[8px] text-amber-300/80 uppercase tracking-wide">Month</p>
             <p className="text-base font-bold text-amber-300">14.800</p>
           </div>
         </div>
-        <p className="text-[9px] text-zinc-500 uppercase tracking-wide mb-2">Programările zilei</p>
+        <p className="text-[9px] text-zinc-500 uppercase tracking-wide mb-2">Today&apos;s appointments</p>
         <div className="space-y-1.5">
           {appts.map((a) => (
             <div key={a.time} className="flex items-center gap-2 p-2 rounded-lg bg-white/5 border border-white/5">
@@ -223,24 +223,24 @@ function MaisonDashboard() {
 }
 
 function MaisonStats() {
-  const months = ["Ian", "Feb", "Mar", "Apr", "Mai", "Iun"];
+  const months = ["Jan", "Feb", "Mar", "Apr", "May", "Jun"];
   const heights = [40, 55, 48, 70, 85, 95];
   return (
     <div className="bg-zinc-950 text-zinc-100 h-full p-5 overflow-hidden">
       <div className="flex items-center justify-between mb-4">
         <div>
-          <h2 className="text-base font-bold">Panou Admin</h2>
-          <p className="text-[9px] text-zinc-500">Vedere de ansamblu · Mai 2025</p>
+          <h2 className="text-base font-bold">Admin Panel</h2>
+          <p className="text-[9px] text-zinc-500">Overview · May 2025</p>
         </div>
         <span className="text-[9px] px-2.5 py-1 rounded-full bg-white/5 border border-white/10">
-          Ultimele 6 luni
+          Last 6 months
         </span>
       </div>
       <div className="grid grid-cols-4 gap-2 mb-4">
         {[
-          { label: "Venit", val: "82.4K", sub: "+12%", icon: TrendingUp, color: "text-emerald-400" },
-          { label: "Programări", val: "847", sub: "+8%", icon: Calendar, color: "text-cyan-400" },
-          { label: "Clienți", val: "312", sub: "+15%", icon: Users, color: "text-violet-400" },
+          { label: "Revenue", val: "82.4K", sub: "+12%", icon: TrendingUp, color: "text-emerald-400" },
+          { label: "Bookings", val: "847", sub: "+8%", icon: Calendar, color: "text-cyan-400" },
+          { label: "Clients", val: "312", sub: "+15%", icon: Users, color: "text-violet-400" },
           { label: "Rating", val: "4.9", sub: "287 rev.", icon: Star, color: "text-amber-400" },
         ].map((k) => (
           <div key={k.label} className="rounded-lg bg-white/5 border border-white/5 p-2.5">
@@ -253,7 +253,7 @@ function MaisonStats() {
       </div>
       <div className="rounded-xl bg-white/5 border border-white/5 p-3 mb-3">
         <div className="flex items-center justify-between mb-2">
-          <p className="text-[10px] font-semibold">Venituri lunare</p>
+          <p className="text-[10px] font-semibold">Monthly revenue</p>
           <span className="text-[8px] text-zinc-500">RON</span>
         </div>
         <div className="flex items-end gap-2 h-20">
@@ -270,7 +270,7 @@ function MaisonStats() {
       </div>
       <div className="grid grid-cols-2 gap-2">
         <div className="rounded-lg bg-white/5 border border-white/5 p-2.5">
-          <p className="text-[9px] text-zinc-500 mb-1.5">Top angajat</p>
+          <p className="text-[9px] text-zinc-500 mb-1.5">Top employee</p>
           <div className="flex items-center gap-2">
             <img src={photos.barber1} className="w-6 h-6 rounded-full object-cover" alt="" />
             <div>
@@ -280,9 +280,9 @@ function MaisonStats() {
           </div>
         </div>
         <div className="rounded-lg bg-white/5 border border-white/5 p-2.5">
-          <p className="text-[9px] text-zinc-500 mb-1.5">Oră aglomerată</p>
+          <p className="text-[9px] text-zinc-500 mb-1.5">High demand hour</p>
           <p className="text-sm font-bold">17:00 – 19:00</p>
-          <p className="text-[8px] text-zinc-500">Joi & Vineri</p>
+          <p className="text-[8px] text-zinc-500">Thursday & Friday</p>
         </div>
       </div>
     </div>
@@ -310,13 +310,13 @@ function TohamiHero() {
       <div className="absolute top-0 inset-x-0 flex items-center justify-between px-5 py-3">
         <span className="font-display text-[11px] tracking-[0.4em] uppercase text-white/95 shrink-0">TOHAMI</span>
         <div className="flex gap-4 text-[7px] tracking-[0.25em] uppercase text-white/55">
-          <span>Vinuri</span>
-          <span>Domeniu</span>
-          <span>Poveste</span>
+          <span>Wines</span>
+          <span>Estate</span>
+          <span>Story</span>
           <span>Contact</span>
         </div>
         <span className="text-[7px] tracking-[0.18em] uppercase px-2.5 py-1.5 border shrink-0" style={{ borderColor: TH_GOLD, color: TH_GOLD }}>
-          Vizitează
+          Visit
         </span>
       </div>
 
@@ -326,23 +326,23 @@ function TohamiHero() {
           Moldova · Codru · Est. 1987
         </p>
         <h1 className="font-display text-[2.6rem] text-white font-normal leading-[1.05] max-w-sm">
-          Vin din piatră,<br /><em>timp și răbdare.</em>
+          Wine from stone,<br /><em>time and patience.</em>
         </h1>
         <p className="text-[9px] mt-3 max-w-xs leading-relaxed" style={{ color: "rgba(255,255,255,0.48)" }}>
-          Tohami produce vinuri de caracter din soiuri autohtone.
-          Fiecare sticlă spune povestea solului nostru.
+          Tohami produces characterful wines from native grape varieties.
+          Each bottle tells the story of our soil.
         </p>
         <div className="flex gap-2.5 mt-5">
           <span className="text-[8px] tracking-[0.2em] uppercase px-4 py-2 text-white" style={{ background: TH_WINE }}>
-            Descoperă vinurile
+            Discover the wines
           </span>
           <span className="text-[8px] tracking-[0.2em] uppercase px-4 py-2 border text-white/70" style={{ borderColor: "rgba(255,255,255,0.2)" }}>
-            Despre domeniu
+            About the estate
           </span>
         </div>
         <div className="flex items-center gap-2 mt-6">
           <div className="w-8 h-px" style={{ background: TH_GOLD, opacity: 0.35 }} />
-          <span className="text-[7px] tracking-[0.4em] uppercase" style={{ color: "rgba(255,255,255,0.28)" }}>Derulează</span>
+          <span className="text-[7px] tracking-[0.4em] uppercase" style={{ color: "rgba(255,255,255,0.28)" }}>Scroll</span>
         </div>
       </div>
     </div>
@@ -351,9 +351,9 @@ function TohamiHero() {
 
 function TohamiWines() {
   const wines = [
-    { img: photos.wine1, name: "Fetească Neagră", year: "2021", type: "Roșu sec", desc: "Cireașă, mure și note de pământ umed. Tanini fini, final lung.", price: "185 lei" },
-    { img: photos.wine2, name: "Rară Neagră", year: "2020", type: "Roșu sec", desc: "Structură puternică, cu nuanțe de prune și ciocolată amară.", price: "220 lei" },
-    { img: photos.wine3, name: "Chardonnay Privat", year: "2022", type: "Alb sec", desc: "Flori albe, citrice și final mineral elegant.", price: "165 lei" },
+    { img: photos.wine1, name: "Fetească Neagră", year: "2021", type: "Dry red", desc: "Cherry, blackberry and notes of wet earth. Fine tannins, long finish.", price: "185 lei" },
+    { img: photos.wine2, name: "Rară Neagră", year: "2020", type: "Dry red", desc: "Powerful structure, with notes of plum and bitter chocolate.", price: "220 lei" },
+    { img: photos.wine3, name: "Chardonnay Privat", year: "2022", type: "Dry white", desc: "White flowers, citrus and an elegant mineral finish.", price: "165 lei" },
   ];
   return (
     <div className="h-full overflow-hidden" style={{ background: TH_CREAM }}>
@@ -361,20 +361,20 @@ function TohamiWines() {
       <div className="flex items-center justify-between px-6 py-3 border-b" style={{ borderColor: TH_BORDER }}>
         <div>
           <span className="font-display text-[11px] tracking-[0.3em] uppercase" style={{ color: TH_DARK }}>TOHAMI</span>
-          <span className="text-[7px] tracking-[0.45em] uppercase ml-2" style={{ color: TH_GOLD }}>Vinărie</span>
+          <span className="text-[7px] tracking-[0.45em] uppercase ml-2" style={{ color: TH_GOLD }}>Winery</span>
         </div>
         <div className="flex gap-5 text-[8px] tracking-[0.2em] uppercase" style={{ color: TH_MUTED }}>
-          <span style={{ color: TH_WINE, borderBottom: `1px solid ${TH_WINE}`, paddingBottom: "1px" }}>Vinuri</span>
-          <span>Domeniu</span>
-          <span>Poveste</span>
+          <span style={{ color: TH_WINE, borderBottom: `1px solid ${TH_WINE}`, paddingBottom: "1px" }}>Wines</span>
+          <span>Estate</span>
+          <span>Story</span>
           <span>Contact</span>
         </div>
       </div>
 
       <div className="px-6 py-4">
-        <p className="text-[8px] tracking-[0.4em] uppercase mb-1" style={{ color: TH_GOLD }}>Colecția 2025</p>
-        <h2 className="font-display text-2xl mb-1" style={{ color: TH_DARK }}>Vinurile noastre</h2>
-        <p className="text-[9px] mb-4" style={{ color: TH_MUTED }}>Soiuri autohtone moldovenești, îmbuteliate cu respect față de tradiție.</p>
+        <p className="text-[8px] tracking-[0.4em] uppercase mb-1" style={{ color: TH_GOLD }}>2025 Collection</p>
+        <h2 className="font-display text-2xl mb-1" style={{ color: TH_DARK }}>Our wines</h2>
+        <p className="text-[9px] mb-4" style={{ color: TH_MUTED }}>Moldovan native grape varieties, bottled with respect for tradition.</p>
         <div className="grid grid-cols-3 gap-3">
           {wines.map((w) => (
             <div key={w.name} className="overflow-hidden border" style={{ borderColor: TH_BORDER, background: "#fff" }}>
@@ -390,7 +390,7 @@ function TohamiWines() {
                 <p className="text-[8px] leading-relaxed mb-2" style={{ color: TH_MUTED }}>{w.desc}</p>
                 <div className="flex items-center justify-between">
                   <p className="text-[10px] font-semibold" style={{ color: TH_DARK }}>{w.price}</p>
-                  <span className="text-[7px] tracking-[0.15em] uppercase border px-2 py-0.5" style={{ borderColor: TH_WINE, color: TH_WINE }}>Comandă</span>
+                  <span className="text-[7px] tracking-[0.15em] uppercase border px-2 py-0.5" style={{ borderColor: TH_WINE, color: TH_WINE }}>Order</span>
                 </div>
               </div>
             </div>
@@ -408,12 +408,12 @@ function TohamiStory() {
       <div className="flex items-center justify-between px-6 py-3 border-b border-white/10">
         <div>
           <span className="font-display text-[11px] tracking-[0.3em] uppercase text-white/90">TOHAMI</span>
-          <span className="text-[7px] tracking-[0.45em] uppercase ml-2" style={{ color: TH_GOLD }}>Vinărie</span>
+          <span className="text-[7px] tracking-[0.45em] uppercase ml-2" style={{ color: TH_GOLD }}>Winery</span>
         </div>
         <div className="flex gap-5 text-[8px] tracking-[0.2em] uppercase text-white/40">
-          <span>Vinuri</span>
-          <span style={{ color: "rgba(196,163,90,0.9)", borderBottom: `1px solid ${TH_GOLD}`, paddingBottom: "1px" }}>Domeniu</span>
-          <span>Poveste</span>
+          <span>Wines</span>
+          <span style={{ color: "rgba(196,163,90,0.9)", borderBottom: `1px solid ${TH_GOLD}`, paddingBottom: "1px" }}>Estate</span>
+          <span>Story</span>
           <span>Contact</span>
         </div>
       </div>
@@ -427,31 +427,31 @@ function TohamiStory() {
           <div className="absolute bottom-6 left-6 right-8">
             <div className="w-5 h-px mb-2" style={{ background: TH_GOLD }} />
             <p className="font-display text-base text-white/90 italic leading-snug">
-              &ldquo;Solul de argilă al Codrului dă vinului un caracter unic, inimitabil.&rdquo;
+              &ldquo;The clay soil of Codru gives the wine a unique, unmistakable character.&rdquo;
             </p>
-            <p className="text-[8px] tracking-[0.3em] uppercase mt-2" style={{ color: TH_GOLD }}>— Ion Tohami, fondator</p>
+            <p className="text-[8px] tracking-[0.3em] uppercase mt-2" style={{ color: TH_GOLD }}>— Ion Tohami, founder</p>
           </div>
         </div>
 
         {/* Right: story text */}
         <div className="p-6 overflow-hidden" style={{ color: "rgba(255,255,255,0.8)" }}>
-          <p className="text-[8px] tracking-[0.5em] uppercase mb-3" style={{ color: TH_GOLD }}>Domeniul nostru</p>
+          <p className="text-[8px] tracking-[0.5em] uppercase mb-3" style={{ color: TH_GOLD }}>Our estate</p>
           <h2 className="font-display text-2xl leading-tight mb-4 text-white">
-            Trei generații,<br />un singur sol.
+            Three generations,<br />one soil.
           </h2>
           <p className="text-[9px] leading-relaxed mb-3" style={{ color: "rgba(255,255,255,0.5)" }}>
-            Cramă Tohami a luat naștere în 1987 în inima Codrului moldovenesc, pe dealuri
-            cu sol de argilă care conferă vinurilor noastre mineralitate și adâncime aparte.
+            Tohami Cellar was founded in 1987 in the heart of Moldovan Codru, on hills
+            with clay soil that gives our wines their distinct mineral character and depth.
           </p>
           <p className="text-[9px] leading-relaxed mb-5" style={{ color: "rgba(255,255,255,0.45)" }}>
-            Astăzi, 48 de hectare de viță-de-vie susțin o colecție de vinuri care
-            reprezintă caracterul autentic al terorului moldovenesc.
+            Today, 48 hectares of vineyards support a collection of wines that
+            represent the authentic character of Moldovan terroir.
           </p>
           <div className="grid grid-cols-3 gap-3 mb-5">
             {[
-              { n: "1987", l: "Fondare" },
-              { n: "48 ha", l: "Vie" },
-              { n: "6", l: "Soiuri" },
+              { n: "1987", l: "Founded" },
+              { n: "48 ha", l: "Vineyards" },
+              { n: "6", l: "Varieties" },
             ].map((s) => (
               <div key={s.n} className="border-l pl-3" style={{ borderColor: TH_GOLD, borderLeftWidth: "2px" }}>
                 <p className="font-display text-lg text-white">{s.n}</p>
@@ -477,12 +477,12 @@ function TohamiContact() {
       <div className="flex items-center justify-between px-6 py-3 border-b" style={{ borderColor: TH_BORDER }}>
         <div>
           <span className="font-display text-[11px] tracking-[0.3em] uppercase" style={{ color: TH_DARK }}>TOHAMI</span>
-          <span className="text-[7px] tracking-[0.45em] uppercase ml-2" style={{ color: TH_GOLD }}>Vinărie</span>
+          <span className="text-[7px] tracking-[0.45em] uppercase ml-2" style={{ color: TH_GOLD }}>Winery</span>
         </div>
         <div className="flex gap-5 text-[8px] tracking-[0.2em] uppercase" style={{ color: TH_MUTED }}>
-          <span>Vinuri</span>
-          <span>Domeniu</span>
-          <span>Poveste</span>
+          <span>Wines</span>
+          <span>Estate</span>
+          <span>Story</span>
           <span style={{ color: TH_WINE, borderBottom: `1px solid ${TH_WINE}`, paddingBottom: "1px" }}>Contact</span>
         </div>
       </div>
@@ -493,13 +493,13 @@ function TohamiContact() {
           <img src={photos.wineryEstate} alt="" className="absolute inset-0 w-full h-full object-cover opacity-80" />
           <div className="absolute inset-0" style={{ background: `linear-gradient(to top, ${TH_DARK} 0%, rgba(26,21,16,.5) 60%, transparent 100%)` }} />
           <div className="absolute bottom-0 left-0 right-0 p-6">
-            <p className="text-[8px] tracking-[0.4em] uppercase mb-2" style={{ color: TH_GOLD }}>Planifică o vizită</p>
-            <h2 className="font-display text-xl text-white leading-snug mb-3">Vino la cramă</h2>
+            <p className="text-[8px] tracking-[0.4em] uppercase mb-2" style={{ color: TH_GOLD }}>Plan your visit</p>
+            <h2 className="font-display text-xl text-white leading-snug mb-3">Visit the cellar</h2>
             <div className="space-y-1.5">
               {[
-                { l: "Locație", v: "Codru, Rep. Moldova" },
-                { l: "Program", v: "Luni–Sâmbătă, 10:00–18:00" },
-                { l: "Telefon", v: "+373 22 123 456" },
+                { l: "Location", v: "Codru, Rep. Moldova" },
+                { l: "Hours", v: "Mon–Sat, 10:00–18:00" },
+                { l: "Phone", v: "+373 22 123 456" },
                 { l: "Email", v: "contact@tohami.md" },
               ].map((c) => (
                 <div key={c.l} className="flex gap-2 text-[8px]">
@@ -513,14 +513,14 @@ function TohamiContact() {
 
         {/* Right: contact form */}
         <div className="p-6" style={{ background: "#fff" }}>
-          <p className="text-[8px] tracking-[0.4em] uppercase mb-2" style={{ color: TH_GOLD }}>Scrie-ne</p>
-          <h2 className="font-display text-xl mb-4" style={{ color: TH_DARK }}>Rezervă o degustare</h2>
+          <p className="text-[8px] tracking-[0.4em] uppercase mb-2" style={{ color: TH_GOLD }}>Write to us</p>
+          <h2 className="font-display text-xl mb-4" style={{ color: TH_DARK }}>Book a tasting</h2>
           <div className="space-y-3">
             {[
-              { l: "Nume", v: "Alexandru Rusu" },
+              { l: "Name", v: "Alexandru Rusu" },
               { l: "Email", v: "alex@email.md" },
-              { l: "Data vizitei", v: "15 Iunie 2025" },
-              { l: "Mesaj", v: "Doresc o degustare pentru 4 persoane..." },
+              { l: "Visit date", v: "15 June 2025" },
+              { l: "Message", v: "I would like a tasting for 4 people..." },
             ].map((f) => (
               <div key={f.l}>
                 <p className="text-[7px] tracking-[0.3em] uppercase mb-0.5 font-medium" style={{ color: TH_MUTED }}>{f.l}</p>
@@ -528,7 +528,7 @@ function TohamiContact() {
               </div>
             ))}
             <div className="pt-1 text-[8px] tracking-[0.2em] uppercase px-4 py-2.5 text-white text-center" style={{ background: TH_WINE }}>
-              Trimite cererea
+              Send request
             </div>
           </div>
         </div>

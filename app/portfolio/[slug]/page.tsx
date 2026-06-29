@@ -104,7 +104,7 @@ export default function ProjectPage({ params }: { params: Promise<{ slug: string
           <Link href="/portfolio" className="flex items-center gap-2 group">
             <ArrowLeft className="w-4 h-4 text-stone-400 group-hover:text-stone-900 group-hover:-translate-x-0.5 transition-all" />
             <span className="text-sm text-stone-500 group-hover:text-stone-900 transition-colors">
-              Înapoi la portofoliu
+              Back to portfolio
             </span>
           </Link>
           <div className="flex items-center gap-4">
@@ -117,7 +117,7 @@ export default function ProjectPage({ params }: { params: Promise<{ slug: string
               download
               className="hidden sm:inline-flex items-center gap-2 text-xs px-3 py-1.5 rounded-full bg-stone-900 text-white font-medium hover:bg-stone-700 transition-colors"
             >
-              Descarcă CV
+              Download CV
             </a>
           </div>
         </div>
@@ -150,14 +150,14 @@ export default function ProjectPage({ params }: { params: Promise<{ slug: string
                 className="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-stone-900 text-white font-medium hover:bg-stone-700 transition-colors"
               >
                 <ExternalLink className="w-4 h-4" />
-                {project.liveLabel || "Vezi live"}
+                {project.liveLabel || "View live"}
               </a>
             )}
             <Link
               href="/portfolio#contact"
               className="inline-flex items-center gap-2 px-6 py-3 rounded-full border border-stone-300 text-stone-700 hover:border-stone-400 hover:bg-stone-50 transition-colors"
             >
-              Hai să discutăm
+              Let's talk
               <ArrowRight className="w-4 h-4" />
             </Link>
           </div>
@@ -184,9 +184,9 @@ export default function ProjectPage({ params }: { params: Promise<{ slug: string
         <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
           {[
             { icon: User,     label: "Client",      value: project.client },
-            { icon: Calendar, label: "An",           value: project.year },
-            { icon: Clock,    label: "Durată",       value: project.duration },
-            { icon: Code2,    label: "Tehnologii",   value: `${project.tech.length} tools` },
+            { icon: Calendar, label: "Year",         value: project.year },
+            { icon: Clock,    label: "Duration",     value: project.duration },
+            { icon: Code2,    label: "Technologies", value: `${project.tech.length} tools` },
           ].map((item, i) => (
             <Reveal key={item.label} delay={i * 70}>
               <div className="p-5 rounded-2xl border border-stone-200 bg-white shadow-card">
@@ -203,9 +203,9 @@ export default function ProjectPage({ params }: { params: Promise<{ slug: string
       <section className="max-w-6xl mx-auto px-6 pb-20 grid lg:grid-cols-3 gap-12">
         <Reveal className="lg:col-span-2">
           <p className="inline-flex items-center gap-2 text-xs font-semibold text-cyan-600 uppercase tracking-[0.18em] mb-4">
-            <span className="w-5 h-px bg-cyan-500" />Funcționalități
+            <span className="w-5 h-px bg-cyan-500" />Features
           </p>
-          <h2 className="text-3xl font-bold tracking-tight text-stone-900 mb-8">Ce am construit</h2>
+          <h2 className="text-3xl font-bold tracking-tight text-stone-900 mb-8">What I built</h2>
           <ul className="space-y-4">
             {project.features.map((f) => (
               <li key={f} className="flex items-start gap-3">
@@ -239,9 +239,9 @@ export default function ProjectPage({ params }: { params: Promise<{ slug: string
       <section className="max-w-6xl mx-auto px-6 pb-20">
         <Reveal>
           <div className="mb-10 flex items-end justify-between">
-            <h2 className="text-2xl md:text-3xl font-bold tracking-tight text-stone-900">Alte proiecte</h2>
+            <h2 className="text-2xl md:text-3xl font-bold tracking-tight text-stone-900">Other projects</h2>
             <Link href="/portfolio" className="text-sm text-stone-400 hover:text-stone-900 transition-colors inline-flex items-center gap-1">
-              Vezi toate <ArrowRight className="w-3 h-3" />
+                View all <ArrowRight className="w-3 h-3" />
             </Link>
           </div>
         </Reveal>
@@ -278,16 +278,16 @@ export default function ProjectPage({ params }: { params: Promise<{ slug: string
           <Reveal>
             <div className="text-center">
               <h2 className="text-3xl md:text-4xl font-bold tracking-tight text-white mb-4">
-                Îți place ce vezi?
+                Like what you see?
               </h2>
               <p className="text-stone-400 max-w-xl mx-auto mb-8 leading-relaxed">
-                Sunt în căutarea unui rol în software development. Hai să discutăm despre cum pot contribui în echipa ta.
+                I'm looking for a role in software development. Let's discuss how I can contribute to your team.
               </p>
               <Link
                 href="/portfolio#contact"
                 className="inline-flex items-center gap-2 px-7 py-3.5 rounded-full bg-white text-stone-900 font-semibold hover:bg-stone-100 transition-colors"
               >
-                Hai să discutăm
+                Let's talk
                 <ArrowRight className="w-4 h-4" />
               </Link>
             </div>
@@ -302,7 +302,7 @@ export default function ProjectPage({ params }: { params: Promise<{ slug: string
             <Code2 className="w-4 h-4 text-stone-300" />
             <span>Dogaru Cătălin · Computer Science & IT Student</span>
           </div>
-          <p>© {new Date().getFullYear()} · Construit cu Next.js & Tailwind CSS.</p>
+          <p>© {new Date().getFullYear()} · Built with Next.js & Tailwind CSS.</p>
         </div>
       </footer>
 

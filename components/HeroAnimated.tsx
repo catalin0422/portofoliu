@@ -13,9 +13,9 @@ function Img({ src, alt }: { src: string; alt: string }) {
   );
 }
 
-const AiTrainerImg = () => <Img src="/AI_Trainer_UI.png" alt="AI Personal Trainer" />;
-const MaisonImg    = () => <img src="/Barbershop.png" alt="Maison Barber" style={{ width: "100%", height: "auto", display: "block" }} />;
-const TreiImg      = () => <Img src="/trei-pastori.png"           alt="Trei Pastori"      />;
+const AiTrainerImg = () => <Img src="/AI_Trainer_UI.webp" alt="AI Personal Trainer" />;
+const MaisonImg    = () => <img src="/Barbershop.webp" alt="Maison Barber" style={{ width: "100%", height: "auto", display: "block" }} />;
+const TreiImg      = () => <Img src="/trei-pastori.webp"           alt="Trei Pastori"      />;
 
 /* ─── Card definitions [Component, url-label, dot-color, label] ──────────── */
 const CARD_DEFS: [React.ComponentType, string, string, string][] = [
@@ -108,7 +108,7 @@ function BrowserCard({ Mockup, url, dot, width, height }: { Mockup: React.Compon
 }
 
 /* ─── Headline words ─────────────────────────────────────────────────────── */
-const WORDS = ["Dezvoltare", "full-stack", "și", "machine", "learning"];
+const WORDS = ["Building", "full stack", "and", "machine", "learning"];
 
 /* ─── Timing ─────────────────────────────────────────────────────────────── */
 const RISE_MS         = 600;
@@ -324,11 +324,11 @@ export function HeroAnimated() {
             lineHeight: 1.7,
           }}
         >
-          Student Computer Science & IT, specializat în machine learning, computer vision și dezvoltare full-stack.
+          Computer Science & IT student specializing in machine learning, computer vision, and full stack development.
         </p>
 
         <a
-          href="#proiecte"
+          href="#projects"
           style={{
             display: "inline-flex",
             alignItems: "center",
@@ -346,7 +346,7 @@ export function HeroAnimated() {
           onMouseEnter={(e) => { (e.currentTarget as HTMLElement).style.background = "#1f2937"; }}
           onMouseLeave={(e) => { (e.currentTarget as HTMLElement).style.background = "#000"; }}
         >
-          Vezi proiectele
+          See projects
           <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden>
             <path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
           </svg>

@@ -5,9 +5,9 @@ import "./globals.css";
 export const metadata: Metadata = {
   title: "Dogaru Cătălin · Computer Science & IT Student",
   description:
-    "Portofoliu personal — proiecte de machine learning, computer vision și dezvoltare full-stack. CV, experiență și proiecte tehnice.",
+    "Personal portfolio with machine learning, computer vision, and full stack development projects. CV, experience, and technical work.",
   icons: {
-    icon: "/dogarufavicon.png",
+    icon: "/dogarufavicon.webp",
   },
   other: {
     "format-detection": "telephone=no",
@@ -20,7 +20,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="ro" className={GeistSans.variable}>
+    <html lang="en" className={GeistSans.variable}>
       <body className="min-h-screen font-sans">{children}</body>
     </html>
   );
