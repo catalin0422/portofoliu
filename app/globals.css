@@ -1,0 +1,75 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 40 20% 97%;
+    --foreground: 20 10% 8%;
+    --card: 0 0% 100%;
+    --card-foreground: 20 10% 8%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 20 10% 8%;
+    --primary: 197 71% 40%;
+    --primary-foreground: 0 0% 100%;
+    --secondary: 40 10% 94%;
+    --secondary-foreground: 20 10% 8%;
+    --muted: 40 10% 94%;
+    --muted-foreground: 20 5% 44%;
+    --accent: 197 71% 40%;
+    --accent-foreground: 0 0% 100%;
+    --destructive: 0 65% 48%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 40 10% 88%;
+    --input: 40 10% 88%;
+    --ring: 197 71% 40%;
+    --radius: 0.5rem;
+  }
+}
+
+@layer base {
+  * { @apply border-border; }
+  html {
+    -webkit-text-size-adjust: 100%;
+    font-size: 16px;
+    overflow-x: hidden;
+    min-height: 100%;
+    width: 100%;
+  }
+  body {
+    @apply bg-[#f9f8f6] text-stone-900 antialiased;
+    overflow-x: hidden;
+    min-height: 100%;
+    width: 100%;
+  }
+  ::selection {
+    background: rgba(6, 182, 212, 0.15);
+    color: #0c4a6e;
+  }
+}
+
+/* ─── Entrance animations ───────────────────────────────────────────────── */
+
+/* Navbar slides up from 10px below */
+@keyframes nav-in {
+  from { opacity: 0; transform: translateY(10px); }
+  to   { opacity: 1; transform: translateY(0);    }
+}
+
+/* Headline words slide up from 12px below */
+@keyframes word-in {
+  from { opacity: 0; transform: translateY(12px); }
+  to   { opacity: 1; transform: translateY(0);    }
+}
+
+/* Subtitle / CTA fade up */
+@keyframes fade-up {
+  from { opacity: 0; transform: translateY(10px); }
+  to   { opacity: 1; transform: translateY(0);    }
+}
+
+/* ─── Utility shadows ───────────────────────────────────────────────────── */
+@layer utilities {
+  .shadow-card       { box-shadow: 0 1px 3px rgba(0,0,0,0.06), 0 4px 16px rgba(0,0,0,0.06); }
+  .shadow-card-hover { box-shadow: 0 4px 8px rgba(0,0,0,0.06), 0 16px 40px rgba(0,0,0,0.1); }
+}
