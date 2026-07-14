@@ -180,10 +180,10 @@ export default function PortfolioPage() {
           <div className="mb-16 max-w-2xl">
             <Label>Experience</Label>
             <h2 className="text-4xl md:text-5xl font-bold tracking-tight text-stone-900 leading-tight">
-              What I have built<br />so far
+              Where I have worked<br />so far
             </h2>
             <p className="mt-5 text-stone-500 leading-relaxed">
-              Hands on experience in AI/ML and IT infrastructure, alongside personal and full stack freelance projects.
+              Hands on experience in AI/ML and IT infrastructure, gained across the following teams and companies.
             </p>
           </div>
         </Reveal>
